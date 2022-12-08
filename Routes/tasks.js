@@ -15,3 +15,6 @@ router.get('/', ash(async(req, res) => {
     let tasks = await Task.findAll();
     res.status(200).json(tasks);
 }));
+
+// Export our router, so that it can be imported to construct our apiRouter;
+module.exports = router;

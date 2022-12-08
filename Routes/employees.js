@@ -13,3 +13,6 @@ router.get('/', ash(async(req, res) => {
     let employees = await Employee.findAll({include: [Task]});
     res.status(200).json(employees);
   }));
+
+  //Export our router, so that it can be imported to construct our apiRouter;
+  module.exports = router;
